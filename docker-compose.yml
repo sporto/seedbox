@@ -1,0 +1,21 @@
+transmission:
+  image: timhaak/transmission:latest
+  volumes:
+    - ./data/torrents/downloads:/downloads
+    - ./data/torrents/watch:/watch
+    - ./data/torrents/config:/config
+  ports:
+    - "80:9091"
+    - "45555:45555"
+  restart: always
+  environment:
+    USERNAME: YOURUSERNAME
+    PASSWORD: YOURPASSWORD
+
+btsync:
+  image: aostanin/btsync:latest
+  volumes:
+    - ./data:/data
+  ports:
+    - "3369:3369"
+  restart: always
