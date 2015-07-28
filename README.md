@@ -1,4 +1,4 @@
-== Using this ==
+# Setup
 
 1. Get a webhost and install docker on it. Follow offical instructions.
 2. Fork this repo.
