@@ -41,7 +41,7 @@ docker-compose up
 nc -z my.server.ip 80
 nc -z my.server.ip 45555
 nc -z my.server.ip 3369
-``
+```
 
 ## Setup local
 
