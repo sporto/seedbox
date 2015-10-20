@@ -1,8 +1,5 @@
 # Setup
 
-1. Get a webhost and install docker on it. Follow offical instructions.
-2. Fork this repo.
-
 ## Setup server
 
 - Install git e.g. apt-get install -y git
@@ -46,5 +43,7 @@ nc -z my.server.ip 3369
 ## Setup local
 
 - Install btsync on your local machines and use the folder secrets you made earlier.
+
+# Usage
 
 You can get torrents up to the machine one of two ways. Either go to the web interface (port 80) and upload to the transmission daemon or just cope the files into the btsync folder torrents/watch where they will be automatically picked up by transmission.
