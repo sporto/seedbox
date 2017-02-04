@@ -13,9 +13,11 @@ transmission:
     PASSWORD: YOURPASSWORD
 
 btsync:
-  image: ctlc/btsync:latest
+  image: viranch/btsync:latest
   volumes:
     - ./data:/data
   ports:
     - "3369:3369"
   restart: always
+  environment:
+    - SECRET:xxxxxxx
