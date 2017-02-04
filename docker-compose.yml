@@ -13,7 +13,7 @@ transmission:
     PASSWORD: YOURPASSWORD
 
 btsync:
-  image: aostanin/btsync:latest
+  image: ctlc/btsync:latest
   volumes:
     - ./data:/data
   ports:
