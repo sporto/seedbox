@@ -2,28 +2,27 @@
 
 ## Setup server
 
-- Install git e.g. apt-get install -y git
+Install git e.g. apt-get install -y git
 
-- Install docker and docker-compose, see:
+Install docker and docker-compose, see:
 
-https://docs.docker.com/installation/
-https://docs.docker.com/compose/install/
+- https://docs.docker.com/installation/
+- https://docs.docker.com/compose/install/
 
-- Clone this repo in your server e.g. git clone https://github.com/.../seedbox-setup.git
+Clone this repo in your server e.g. git clone https://github.com/.../seedbox-setup.git
 
-- Edit `docker-compose.yml`, setup transmission web interface username and password
+Edit `docker-compose.yml`, setup transmission web interface username and password
 
-- Generate 2 secrets for bittorrent sync:
+- Generate a secret for bittorrent sync:
 
 ```
 docker-compose run btsync bin/bash
 ./btsync --generate-secret
-./btsync --generate-secret
-# Copy the generated secrets
+# Copy the generated secret
 exit
 ```
 
-Edit data/btsync.conf and paste the generated secrets
+Edit `data/sync.conf` and paste the generated secret
 
 
 - Run docker compose:
@@ -37,7 +36,7 @@ docker-compose up
 ```
 nc -z my.server.ip 80
 nc -z my.server.ip 45555
-nc -z my.server.ip 3369
+nc -z my.server.ip 55555
 ```
 
 ## Setup local
