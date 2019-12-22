@@ -11,7 +11,11 @@ Install docker and docker-compose, see:
 
 Clone this repo in your server e.g. git clone https://github.com/.../seedbox-setup.git
 
-Edit `docker-compose.yml`, setup transmission web interface username and password
+### Transmission credentials
+
+Edit transmission.env
+
+### Sync config
 
 - Generate a secret for bittorrent sync:
 
@@ -31,11 +35,11 @@ Edit `data/sync.conf` and paste the generated secret
 docker-compose up
 ```
 
-- Make sure ports 80, 45555 and 3369 are open
+- Make sure ports 80, 51413 and 3369 are open
 
 ```
 nc -z my.server.ip 80
-nc -z my.server.ip 45555
+nc -z my.server.ip 51413
 nc -z my.server.ip 55555
 ```
 

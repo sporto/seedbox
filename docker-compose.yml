@@ -2,23 +2,23 @@ version: "3.7"
 services:
 
   transmission:
-    image: linuxserver/transmission:latest
+    image: linuxserver/transmission
+    env_file:
+      - transmission.env
     volumes:
-      - ./data/torrents/downloads:/downloads
-      - ./data/torrents/watch:/watch
-      - ./data/torrents/config:/config
+      - ./data/transmission/downloads:/downloads
+      - ./data/transmission/watch:/watch
+      - ./data/transmission/config:/config
     ports:
-      - "80:9091"
-      - "45555:45555"
+      - 80:9091
+      - 51413:51413
+      - 51413:51413/udp
     restart: always
-    environment:
-      USERNAME: xxxx
-      PASSWORD: xxxx
 
   sync:
-    image: resilio/sync:latest
+    image: resilio/sync
     volumes:
       - ./data:/mnt/sync
     ports:
-      - "55555:55555"
+      - 55555:55555
     restart: always
