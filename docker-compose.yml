@@ -1,21 +1,24 @@
-transmission:
-  image: linuxserver/transmission:latest
-  volumes:
-    - ./data/torrents/downloads:/downloads
-    - ./data/torrents/watch:/watch
-    - ./data/torrents/config:/config
-  ports:
-    - "80:9091"
-    - "45555:45555"
-  restart: always
-  environment:
-    USERNAME: xxxx
-    PASSWORD: xxxx
+version: "3.7"
+services:
 
-sync:
-  image: resilio/sync:latest
-  volumes:
-    - ./data:/mnt/sync
-  ports:
-    - "55555:55555"
-  restart: always
+  transmission:
+    image: linuxserver/transmission:latest
+    volumes:
+      - ./data/torrents/downloads:/downloads
+      - ./data/torrents/watch:/watch
+      - ./data/torrents/config:/config
+    ports:
+      - "80:9091"
+      - "45555:45555"
+    restart: always
+    environment:
+      USERNAME: xxxx
+      PASSWORD: xxxx
+
+  sync:
+    image: resilio/sync:latest
+    volumes:
+      - ./data:/mnt/sync
+    ports:
+      - "55555:55555"
+    restart: always
