@@ -1,5 +1,5 @@
 transmission:
-  image: timhaak/transmission:latest
+  image: linuxserver/transmission:latest
   volumes:
     - ./data/torrents/downloads:/downloads
     - ./data/torrents/watch:/watch
