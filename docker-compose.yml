@@ -18,7 +18,7 @@ services:
   sync:
     image: resilio/sync
     volumes:
-      - ./data:/mnt/sync
+      - ./data/transmission:/mnt/sync
     ports:
       - 55555:55555
     restart: always
