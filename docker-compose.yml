@@ -20,5 +20,6 @@ services:
     volumes:
       - ./data/transmission:/mnt/sync
     ports:
+      - 8888:8888
       - 55555:55555
     restart: always
