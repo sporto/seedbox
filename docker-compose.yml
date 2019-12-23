@@ -16,12 +16,9 @@ services:
     restart: always
 
   sync:
-    image: linuxserver/resilio-sync
+    image: resilio/sync
     volumes:
-      - ./resilio:/config
-      - ./cache:/downloads
-      - ./data/transmission:/sync
+      - ./data:/mnt/sync
     ports:
-      - 8888:8888
       - 55555:55555
     restart: always
